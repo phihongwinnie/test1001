@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="Shortcut Icon" type="image/x-icon" href="./image/icon_logo.png" />
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>PHIHONG (DONGGUAN) ELECTRONICS CO., LTD.</title>
+</head>
+
+<body>
+
+    <div class="container fontFam">
+        <header class="col-des-12 col-mob-12">
+            <figure>
+                <img src="./image/phihong_logo.png" alt="phihong_logo">
+            </figure>
+            <h2>飞宏(东莞)电子有限公司</h2>
+            <h3>员工基本资料表</h3>
+        </header>
+        <section class="col-des-12 col-mob-12">
+            <div class="idInput">
+                <h4>請输入身分証号碼</h4>
+                <input type="text" placeholder="請输入身分証号碼共18碼">
+                <button>下一步</button>
+            </div>
+            <div class="basicInfo basicStyle">
+                <p class="infoTitle">姓名：</p>
+                <input type="text" placeholder="請输入姓名">
+                <p class="infoTitle">身分証号碼：</p>
+                <p>110102YYYYMMDD888X</p>
+                <p class="infoTitle">性別：</p>
+                <p>女性</p>
+                <p class="infoTitle">身高：</p>
+                <input type="number" min="0" placeholder="請输入身高">cm
+                <p class="infoTitle">体重：</p>
+                <input type="number" min="0" placeholder="請输入体重">Kg
+                <p class="infoTitle">手机号碼：(纯数字)</p>
+                <input type="text" placeholder="0900123456">
+                <p class="infoTitle">婚姻状态：</p>
+                <label for="single">
+                    <input type="radio" name="gender"" id="single" value="single">
+                    未婚
+                </label>
+                <label for="married">
+                    <input type="radio" name="gender" id="married" value="married">
+                    已婚
+                </label>
+                <p class="infoTitle">民族：</p>
+                <input type="text" placeholder="請输入民族">
+            </div>
+            <div class="eduPart basicStyle">
+                <p class="infoTitle">英语能力：</p>
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value="">未检定</option>
+                    <option value="">PETS-2</option>
+                    <option value="">CET-4 或 PETS-3</option>
+                    <option value="">CET-6 或 PETS-4</option>
+                    <option value="">TEM-4</option>
+                    <option value="">PETS-5</option>
+                    <option value="">TEM-8</option>
+                </select>
+                <div class="clearfix"></div>
+                <div class="edu">
+                    <p class="infoTitle">最高学历：</p>
+                    <select name="" id="">
+                            <option value="">请选择</option>
+                            <option value="">硕士</option>
+                            <option value="">大学本科</option>
+                            <option value="">大专</option>
+                            <option value="">高中(职)、中专</option>
+                            <option value="">初中</option>
+                            <option value="">小学</option>
+                    </select>
+                </div>
+                <div class="eduType">
+                    <p class="infoTitle">结业类型：</p>
+                    <label for="graduate">
+                        <input type="radio" name="eduType" id="graduate">毕业
+                    </label>
+                    <label for="notGraduate">
+                        <input type="radio" name="eduType" id="notGraduate">肄业
+                    </label>
+                </div>
+                <div class="clearfix"></div>
+                <p class="infoTitle">学校名称：</p>
+                <input type="text" placeholder="請输入学校名称">
+                <p class="infoTitle">学习期间：</p>
+                <div>
+                    自<input type="date" name="" id="">起
+                </div>
+                <div>
+                    至<input type="date" name="" id="">止
+                </div>
+                <p class="infoTitle">就读专业：</p>
+                <input type="text" placeholder="請输入专业名称">
+            </div>
+            <div class="health basicStyle">
+                <p class="infoTitle">截至入职当天为止，尚未完全康复的疾病：</p>
+                <label for="no">
+                    <input type="radio" name="healthType" id="no">无
+                </label>
+                <label for="yes">
+                    <input type="radio" name="healthType" id="yes">有
+                </label>
+            </div>
+        </section>
+        <section class="col-des-12 col-mob-12">
+            <div class="addressInfo basicStyle">
+                <p class="infoTitle">户籍地址：</p>
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                </select>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                </select>
+                <p>XX省YY县</p>
+                <input type="text" placeholder="請输入地址">
+                <p class="infoTitle">居住地址：</p>
+                <label for="sameAdd">
+                    <input type="checkbox" name="" id="sameAdd">同户籍地址
+                </label>
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                </select>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                </select>
+                <p>XX省YY县</p>
+                <input type="text" placeholder="請输入地址">
+            </div>
+            <div class="emeContact basicStyle">
+                <p class="infoTitle">紧急联络人姓名：</p>
+                <input type="text" placeholder="請输入紧急联络人姓名">
+                <p class="infoTitle">关系：</p>
+                <input type="text" placeholder="請输入关系">
+                <p class="infoTitle">紧急联络人手机号码：</p>
+                <input type="text" placeholder="請输入手机号码">
+                <p class="infoTitle">紧急联络人居住地址：</p>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                </select>
+                <select name="" id="">
+                            <option value="">请选择</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                </select>
+                <select name="" id="">
+                            <option value="">请选择</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                </select>
+                <p>XX省YY县</p>
+                <input type="text" placeholder="請输入地址">
+            </div>
+            <div class="family basicStyle">
+                <h2>家庭成员</h2>
+                <div>
+                    <p class="infoTitle">称谓：</p>
+                    <input type="text" placeholder="請输入称谓">
+                    <p class="infoTitle">姓名：</p>
+                    <input type="text" placeholder="請输入姓名">
+                    <p class="infoTitle">年龄：</p>
+                    <input type="number" placeholder="請输入年龄">
+                    <p class="infoTitle">手机号码：</p>
+                    <input type="text" placeholder="請输入手机号码">
+                    <div>
+                        <button>删除</button>
+                    </div>
+                </div>
+                <div>
+                    <button>新增家庭成员</button>
+                </div>
+            </div>
+            <div class="enterMethod basicStyle">
+                <p class="infoTitle">入职管道：</p>
+                <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value="">人才市场</option>
+                        <option value="">劳务中介</option>
+                        <option value="">招聘广告</option>
+                        <option value="">求职网站</option>
+                        <option value="">内部员工介绍</option>
+                </select>
+                <p class="infoTitle">介紹人姓名：</p>
+                <input type="text" placeholder="請输入姓名">
+                <p class="infoTitle">介紹人部门：</p>
+                <input type="text" placeholder="請输入介紹人部门">
+                <p class="infoTitle">与本人关系：</p>
+                <input type="text" placeholder="請输入关系">
+            </div>
+            <div class="workExp basicStyle">
+                <h2>工作经历</h2>
+                <div>
+                    <p class="infoTitle">公司全名：</p>
+                    <input type="text" placeholder="請输入公司全名">
+                    <p class="infoTitle">任职期间：</p>
+                    <div>
+                        自<input type="date" name="" id="">起
+                    </div>
+                    <div>
+                        至<input type="date" name="" id="">止
+                    </div>
+                    <p class="infoTitle">任职部门：</p>
+                    <input type="text" placeholder="請输入任职部门">
+                    <p class="infoTitle">职位：</p>
+                    <input type="text" placeholder="請输入职位">
+                    <p class="infoTitle">离职原因：</p>
+                    <input type="text" placeholder="請输入离职原因">
+                    <div>
+                        <button>删除</button>
+                    </div>
+                    <div>
+                        <button>新增工作经历</button>
+                    </div>
+                </div>
+            </div>
+            <button>下一步</button>
+        </section>
+        <footer>
+            Footer
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+}
+
+.fontFam {
+    font-family: 微軟正黑體, 新細明體;
+}
+
+.clearfix {
+    width: 100%;
+    clear: both;
+}
+
+@media screen and (max-width:767px) {
+    .col-mob-1 {
+        width: 8.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-2 {
+        width: 16.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-3 {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-4 {
+        width: 33.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-5 {
+        width: 41.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-6 {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-7 {
+        width: 58.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-8 {
+        width: 66.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-9 {
+        width: 75%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-10 {
+        width: 83.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-11 {
+        width: 91.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-mob-12 {
+        width: 100%;
+        /*float: left;*/
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .mob_hidden {
+        display: none;
+    }
+    .mob_show {
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .col-des-1 {
+        width: 8.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-2 {
+        width: 16.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-3 {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-4 {
+        width: 33.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-5 {
+        width: 41.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-6 {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-7 {
+        width: 58.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-8 {
+        width: 66.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-9 {
+        width: 75%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-10 {
+        width: 83.333333%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-11 {
+        width: 91.666666%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-des-12 {
+        width: 100%;
+        /* float: left;*/
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .des_hidden {
+        display: none;
+    }
+}
+
+.container {
+    max-width: 960px;
+    padding: 10px 5px;
+    margin: 0 auto;
+    header {
+        text-align: center;
+        line-height: 350%;
+        margin-top: 20px;
+    }
+    input {
+        font-family: 微軟正黑體, 新細明體;
+    }
+}
+
+header {
+    figure {
+        img {
+            vertical-align: top;
+            width: 30%;
+        }
+    }
+    h2 {
+        color: rgb(13, 92, 171);
+    }
+    h3 {
+        font-size: 23px;
+    }
+}
+
+.idInput {
+    padding-top: 20px;
+    line-height: 300%;
+    text-align: center;
+    h4 {
+        font-size: 20px;
+    }
+    input {
+        font-family: 微軟正黑體, 新細明體;
+        display: block;
+        font-size: 20px;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    button {
+        font-family: 微軟正黑體, 新細明體;
+        font-size: 18px;
+    }
+}
+
+.basicStyle {
+    margin: 5% 10%;
+    padding: 2.5%;
+    width: 70%;
+    .infoTitle {
+        padding-top: 10px;
+        margin-top: 15px;
+        font-weight: bolder;
+    }
+    label {
+        margin-right: 20px;
+    }
+}
+
+.eduPart {
+    .edu {
+        width: 50%;
+        float: left;
+    }
+    .eduType {
+        width: 50%;
+        float: left;
+    }
+}
+
+.addressInfo {
+    select {
+        display: block;
+    }
+}
+
+.emeContact {
+    select {
+        display: block;
+    }
+}
