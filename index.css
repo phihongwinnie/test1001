@@ -258,6 +258,7 @@ header h3 {
 
 .basicStyle .infoTitle {
   padding-top: 10px;
+  padding-bottom: 5px;
   margin-top: 15px;
   font-weight: bolder;
 }
@@ -269,6 +270,7 @@ header h3 {
 .basicStyle select {
   font-size: 20px;
   font-family: 微軟正黑體, 新細明體;
+  margin-bottom: 5px;
 }
 
 .basicStyle label {
@@ -281,5 +283,15 @@ header h3 {
 
 .emeContact select {
   display: block;
+}
+
+.family button {
+  font-family: 微軟正黑體, 新細明體;
+  font-size: 18px;
+}
+
+.workExp button {
+  font-family: 微軟正黑體, 新細明體;
+  font-size: 18px;
 }
 /*# sourceMappingURL=index.css.map */
