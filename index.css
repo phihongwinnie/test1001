@@ -250,6 +250,7 @@ header h3 {
 }
 
 .basicStyle {
+  font-size: 20px;
   margin: 5% 10%;
   padding: 2.5%;
   width: 70%;
@@ -261,18 +262,17 @@ header h3 {
   font-weight: bolder;
 }
 
+.basicStyle input {
+  font-size: 20px;
+}
+
+.basicStyle select {
+  font-size: 20px;
+  font-family: 微軟正黑體, 新細明體;
+}
+
 .basicStyle label {
   margin-right: 20px;
-}
-
-.eduPart .edu {
-  width: 50%;
-  float: left;
-}
-
-.eduPart .eduType {
-  width: 50%;
-  float: left;
 }
 
 .addressInfo select {
