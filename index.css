@@ -196,6 +196,10 @@
   }
 }
 
+body {
+  background-color: rgba(221, 218, 218, 0.144);
+}
+
 .container {
   max-width: 960px;
   padding: 10px 5px;
