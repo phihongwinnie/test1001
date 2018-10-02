@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  outline: 1px solid red;
 }
 
 .fontFam {
@@ -219,13 +220,22 @@ header figure img {
 
 header h2 {
   color: #0d5cab;
+  border-bottom: 4px solid rgba(13, 92, 171, 0.9);
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 header h3 {
   font-size: 23px;
 }
 
+header h3 span {
+  border-bottom: 2px solid rgba(178, 183, 189, 0.9);
+  padding-bottom: 5px;
+}
+
 .idInput {
+  margin-top: 50px;
   padding-top: 20px;
   line-height: 300%;
   text-align: center;
@@ -239,8 +249,8 @@ header h3 {
   font-family: 微軟正黑體, 新細明體;
   display: block;
   font-size: 20px;
-  width: 50%;
-  margin: auto;
+  width: 75%;
+  margin: 15px auto;
   text-align: center;
 }
 
@@ -296,11 +306,26 @@ header h3 {
 }
 
 @media screen and (max-width: 767px) {
+  header figure img {
+    vertical-align: top;
+    width: 60%;
+  }
   .basicStyle {
     font-size: 20px;
     margin: 5% 0%;
     padding: 2.5%;
     width: 70%;
   }
+}
+
+.basicInfo,
+.eduPart,
+.health,
+.addressInfo,
+.emeContact,
+.family,
+.enterMethod,
+.workExp {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */
