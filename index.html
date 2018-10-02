@@ -34,6 +34,8 @@
                     <input type="text" placeholder="請输入姓名">
                     <p class="infoTitle">身分証号碼：</p>
                     <p>110102YYYYMMDD888X</p>
+                    <p class="infoTitle">出生日期：</p>
+                    <p>YYYY年MM月DD日</p>
                     <p class="infoTitle">性別：</p>
                     <p>女性</p>
                     <p class="infoTitle">身高：</p>
@@ -101,6 +103,8 @@
                     </div>
                     <p class="infoTitle">就读专业：</p>
                     <input type="text" placeholder="請输入专业名称">
+                    <p class="infoTitle">持有专用证照：</p>
+                    <input type="text" placeholder="請输入证照名称">
                 </div>
                 <div class="health basicStyle">
                     <h2>健康状态</h2>
@@ -133,10 +137,10 @@
                         <option value=""></option>
                     </select>
                     <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址">
+                    <input type="text" placeholder="請输入地址" class="addressWidth">
                     <p class="infoTitle">居住地址：</p>
-                    <label for="sameAdd">
-                        <input type="checkbox" name="" id="sameAdd">同户籍地址
+                    <label for="sameAddress">
+                        <input type="checkbox" name="" id="sameAddress">同户籍地址
                     </label>
                     <select name="" id="">
                         <option value="">请选择</option>
@@ -154,12 +158,12 @@
                         <option value=""></option>
                     </select>
                     <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址">
+                    <input type="text" placeholder="請输入地址" class="addressWidth">
                 </div>
                 <div class="emeContact basicStyle">
                     <h2>紧急联络</h2>
                     <p class="infoTitle">紧急联络人姓名：</p>
-                    <input type="text" placeholder="請输入紧急联络人姓名">
+                    <input type="text" placeholder="請输入联络人姓名">
                     <p class="infoTitle">关系：</p>
                     <input type="text" placeholder="請输入关系">
                     <p class="infoTitle">紧急联络人手机号码：</p>
@@ -181,11 +185,11 @@
                         <option value=""></option>
                     </select>
                     <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址">
+                    <input type="text" placeholder="請输入地址" class="addressWidth">
                 </div>
                 <div class="family basicStyle">
                     <h2>家庭成员</h2>
-                    <div>
+                    <div class="hiddenPart famGroup group">
                         <p class="infoTitle">称谓：</p>
                         <input type="text" placeholder="請输入称谓">
                         <p class="infoTitle">姓名：</p>
@@ -198,12 +202,38 @@
                             <button>删除</button>
                         </div>
                     </div>
-                    <div>
+                    <div class="famGroup group">
+                        <p class="infoTitle">称谓：</p>
+                        <input type="text" placeholder="請输入称谓">
+                        <p class="infoTitle">姓名：</p>
+                        <input type="text" placeholder="請输入姓名">
+                        <p class="infoTitle">年龄：</p>
+                        <input type="number" placeholder="請输入年龄">
+                        <p class="infoTitle">手机号码：</p>
+                        <input type="text" placeholder="請输入手机号码">
+                        <div>
+                            <button>删除</button>
+                        </div>
+                    </div>
+                    <div class="famGroup group">
+                        <p class="infoTitle">称谓：</p>
+                        <input type="text" placeholder="請输入称谓">
+                        <p class="infoTitle">姓名：</p>
+                        <input type="text" placeholder="請输入姓名">
+                        <p class="infoTitle">年龄：</p>
+                        <input type="number" placeholder="請输入年龄">
+                        <p class="infoTitle">手机号码：</p>
+                        <input type="text" placeholder="請输入手机号码">
+                        <div>
+                            <button>删除</button>
+                        </div>
+                    </div>
+                    <div class="addFamGroup addGroup">
                         <button>新增家庭成员</button>
                     </div>
                 </div>
                 <div class="enterMethod basicStyle">
-                    <h2>入職方式</h2>
+                    <h2>入职方式</h2>
                     <p class="infoTitle">入职管道：</p>
                     <select name="" id="">
                         <option value="">请选择</option>
@@ -222,7 +252,7 @@
                 </div>
                 <div class="workExp basicStyle">
                     <h2>工作经历</h2>
-                    <div>
+                    <div class="hiddenPart group">
                         <p class="infoTitle">公司全名：</p>
                         <input type="text" placeholder="請输入公司全名">
                         <p class="infoTitle">任职期间：</p>
@@ -238,18 +268,62 @@
                         <input type="text" placeholder="請输入职位">
                         <p class="infoTitle">离职原因：</p>
                         <input type="text" placeholder="請输入离职原因">
-                        <div>
+                        <div class="deleBtn">
                             <button>删除</button>
                         </div>
+                    </div>
+                    <div class="group">
+                        <p class="infoTitle">公司全名：</p>
+                        <input type="text" placeholder="請输入公司全名">
+                        <p class="infoTitle">任职期间：</p>
                         <div>
-                            <button>新增工作经历</button>
+                            自<input type="month" min="1900-01" name="" id="">起
+                        </div>
+                        <div>
+                            至<input type="month" min="1900-01" name="" id="">止
+                        </div>
+                        <p class="infoTitle">任职部门：</p>
+                        <input type="text" placeholder="請输入任职部门">
+                        <p class="infoTitle">职位：</p>
+                        <input type="text" placeholder="請输入职位">
+                        <p class="infoTitle">离职原因：</p>
+                        <input type="text" placeholder="請输入离职原因">
+                        <div class="deleBtn">
+                            <button>删除</button>
                         </div>
                     </div>
+                    <div class="group">
+                        <p class="infoTitle">公司全名：</p>
+                        <input type="text" placeholder="請输入公司全名">
+                        <p class="infoTitle">任职期间：</p>
+                        <div>
+                            自<input type="month" min="1900-01" name="" id="">起
+                        </div>
+                        <div>
+                            至<input type="month" min="1900-01" name="" id="">止
+                        </div>
+                        <p class="infoTitle">任职部门：</p>
+                        <input type="text" placeholder="請输入任职部门">
+                        <p class="infoTitle">职位：</p>
+                        <input type="text" placeholder="請输入职位">
+                        <p class="infoTitle">离职原因：</p>
+                        <input type="text" placeholder="請输入离职原因">
+                        <div class="deleBtn">
+                            <button>删除</button>
+                        </div>
+                    </div>
+                    <div class="addGroup">
+                        <button>新增工作经历</button>
+                    </div>
                 </div>
-                <button>下一步</button>
+                <div class="nextCheck">
+                    <button>下一步</button>
+                </div>
             </section>
             <footer>
-                Footer
+                <figure>
+                    <img src="/image/phihong_logo.png" alt="phihong_logo">
+                </figure>
             </footer>
         </div>
     </form>

@@ -299,6 +299,10 @@ header h3 span {
   display: block;
 }
 
+.addressWidth {
+  width: 85%;
+}
+
 .emeContact select {
   display: block;
 }
@@ -308,9 +312,49 @@ header h3 span {
   font-size: 18px;
 }
 
+.family .group div {
+  text-align: right;
+}
+
+.group {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 2px dotted rgba(178, 183, 189, 0.5);
+}
+
+.addGroup {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .workExp button {
   font-family: 微軟正黑體, 新細明體;
   font-size: 18px;
+}
+
+.workExp .deleBtn {
+  text-align: right;
+}
+
+.nextCheck {
+  text-align: center;
+}
+
+.nextCheck button {
+  font-family: 微軟正黑體, 新細明體;
+  font-size: 18px;
+}
+
+footer figure {
+  margin: 35px 0 10px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 2px solid rgba(13, 92, 171, 0.9);
+}
+
+footer figure img {
+  vertical-align: top;
+  width: 30%;
 }
 
 @media screen and (max-width: 767px) {
@@ -318,5 +362,9 @@ header h3 span {
     vertical-align: top;
     width: 60%;
   }
+}
+
+.hiddenPart {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */
