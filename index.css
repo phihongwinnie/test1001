@@ -225,7 +225,7 @@ header h2 {
 }
 
 header h3 {
-  font-size: 23px;
+  font-size: 24px;
 }
 
 header h3 span {
@@ -234,14 +234,16 @@ header h3 span {
 }
 
 .idInput {
-  margin-top: 50px;
+  margin-top: 30px;
   padding-top: 20px;
+  padding-bottom: 10px;
   line-height: 300%;
   text-align: center;
+  border: 2px solid rgba(178, 183, 189, 0.5);
 }
 
 .idInput h4 {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .idInput input {
@@ -260,9 +262,16 @@ header h3 span {
 
 .basicStyle {
   font-size: 20px;
-  margin: 5% 10%;
-  padding: 2.5%;
-  width: 70%;
+  margin: 5% 0%;
+  padding: 3.5% 5%;
+  border: 2px solid rgba(178, 183, 189, 0.5);
+}
+
+.basicStyle h2 {
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(178, 183, 189, 0.5);
+  color: #0d5cab;
 }
 
 .basicStyle .infoTitle {
@@ -283,7 +292,7 @@ header h3 span {
 }
 
 .basicStyle label {
-  margin-right: 20px;
+  margin-right: 5%;
 }
 
 .addressInfo select {
@@ -309,22 +318,5 @@ header h3 span {
     vertical-align: top;
     width: 60%;
   }
-  .basicStyle {
-    font-size: 20px;
-    margin: 5% 0%;
-    padding: 2.5%;
-    width: 70%;
-  }
-}
-
-.basicInfo,
-.eduPart,
-.health,
-.addressInfo,
-.emeContact,
-.family,
-.enterMethod,
-.workExp {
-  display: none;
 }
 /*# sourceMappingURL=index.css.map */
