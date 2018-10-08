@@ -372,4 +372,22 @@ footer figure img {
 .hiddenPart {
   display: none;
 }
+
+.secondPart,
+.thirdPart,
+.fourPart {
+  display: none;
+}
+
+.defaultUserId,
+.defaultUserBir,
+.defaultUserGend {
+  color: #0d5cab;
+}
+
+#addressOne,
+#addressTwo,
+#addressThree {
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */

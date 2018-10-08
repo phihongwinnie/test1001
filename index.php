@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="index.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="index.js"></script>
-    <title>PHIHONG (DONGGUAN) ELECTRONICS CO., LTD.</title>
+    <title>PHIHONG (DONG GUAN) ELECTRONICS CO., LTD.</title>
 </head>
 
 <body>
-    <form action="">
+<!--     <form action=""> -->
         <div class="container fontFam">
             <header class="col-des-12 col-mob-12">
                 <figure>
@@ -33,22 +33,24 @@
                 <h2>飞宏(东莞)电子有限公司</h2>
                 <h3><span>员工基本资料表</span></h3>
             </header>
-            <section class="col-des-12 col-mob-12">
+            <section class="col-des-12 col-mob-12 firstPart">
                 <div class="idInput">
                     <h4>請输入身分証号碼</h4>
-                    <input type="text" placeholder="身分証号碼">
-                    <button>下一步</button>
+                    <input type="text" placeholder="身分証号碼" id="userId">
+                    <button id="userIdCheck">下一步</button>
                 </div>
+            </section>
+            <section class="col-des-12 col-mob-12 secondPart">
                 <div class="basicInfo basicStyle">
                     <h2>基本资料</h2>
                     <p class="infoTitle">姓名：</p>
                     <input type="text" placeholder="請输入姓名">
                     <p class="infoTitle">身分証号碼：</p>
-                    <p>110102YYYYMMDD888X</p>
+                    <p class="defaultUserId"></p>
                     <p class="infoTitle">出生日期：</p>
-                    <p>YYYY年MM月DD日</p>
+                    <p class="defaultUserBir"></p>
                     <p class="infoTitle">性別：</p>
-                    <p>女性</p>
+                    <p class="defaultUserGend"></p>
                     <p class="infoTitle">身高：</p>
                     <input type="number" min="0" placeholder="請输入身高">cm
                     <p class="infoTitle">体重：</p>
@@ -134,7 +136,7 @@
                     </label>
                 </div>
             </section>
-            <section class="col-des-12 col-mob-12">
+            <section class="col-des-12 col-mob-12 thirdPart">
                 <div class="addressInfo basicStyle">
                     <h2>联络地址</h2>
                     <p class="infoTitle">户籍地址：</p>
@@ -161,8 +163,8 @@
                     <select name="" id="myArea_resident">
                         <option value="">请选择区县</option>
                     </select>
-                    <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址" class="addressWidth">
+                    <p id="address_resident"></p>
+                    <input type="text" placeholder="請输入地址" class="addressWidth" id="addressOne">
                     <p class="infoTitle">居住地址：</p>
                     <label for="sameAddress">
                         <input type="checkbox" name="" id="sameAddress">同户籍地址
@@ -191,8 +193,8 @@
                     <select name="" id="myArea_home">
                         <option value="">请选择区县</option>
                     </select>
-                    <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址" class="addressWidth">
+                    <p id="address_home"></p>
+                    <input type="text" placeholder="請输入地址" class="addressWidth" id="addressTwo">
                 </div>
                 <div class="emeContact basicStyle">
                     <h2>紧急联络</h2>
@@ -227,8 +229,8 @@
                     <select name="" id="myArea_eme">
                         <option value="">请选择区县</option>
                     </select>
-                    <p>XX省YY县</p>
-                    <input type="text" placeholder="請输入地址" class="addressWidth">
+                    <p id="address_eme"></p>
+                    <input type="text" placeholder="請输入地址" class="addressWidth" id="addressThree">
                 </div>
                 <div class="family basicStyle">
                     <h2>家庭成员</h2>
@@ -238,7 +240,7 @@
                         <p class="infoTitle">姓名：</p>
                         <input type="text" placeholder="請输入姓名">
                         <p class="infoTitle">年龄：</p>
-                        <input type="number" placeholder="請输入年龄">
+                        <input type="number" min="0" placeholder="請输入年龄">
                         <p class="infoTitle">手机号码：</p>
                         <input type="text" placeholder="請输入手机号码">
                         <div class="deleBtn">
@@ -251,7 +253,7 @@
                         <p class="infoTitle">姓名：</p>
                         <input type="text" placeholder="請输入姓名">
                         <p class="infoTitle">年龄：</p>
-                        <input type="number" placeholder="請输入年龄">
+                        <input type="number" min="0"placeholder="請输入年龄">
                         <p class="infoTitle">手机号码：</p>
                         <input type="text" placeholder="請输入手机号码">
                         <div class="deleBtn">
@@ -264,7 +266,7 @@
                         <p class="infoTitle">姓名：</p>
                         <input type="text" placeholder="請输入姓名">
                         <p class="infoTitle">年龄：</p>
-                        <input type="number" placeholder="請输入年龄">
+                        <input type="number" min="0" placeholder="請输入年龄">
                         <p class="infoTitle">手机号码：</p>
                         <input type="text" placeholder="請输入手机号码">
                         <div class="deleBtn">
@@ -381,13 +383,13 @@
                     <button>下一步</button>
                 </div>
             </section>
-            <footer>
+            <footer class="fourPart">
                 <figure>
                     <img src="./image/phihong_logo.png" alt="phihong_logo">
                 </figure>
             </footer>
         </div>
-    </form>
+<!--     </form> -->
 
 
 </body>

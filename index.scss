@@ -356,13 +356,20 @@ footer {
     display: none;
 }
 
-// .basicInfo,
-// .eduPart,
-// .health,
-// .addressInfo,
-// .emeContact,
-// .family,
-// .enterMethod,
-// .workExp {
-//     display: none;
-// }
+.secondPart,
+.thirdPart,
+.fourPart {
+    display: none;
+}
+
+.defaultUserId,
+.defaultUserBir,
+.defaultUserGend {
+    color: rgba(13, 92, 171, 1);
+}
+
+#addressOne,
+#addressTwo,
+#addressThree {
+    display: none;
+}
