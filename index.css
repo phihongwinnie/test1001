@@ -390,4 +390,10 @@ footer figure img {
 #addressThree {
   display: none;
 }
+
+#address_resident,
+#address_home,
+#address_eme {
+  color: #0d5cab;
+}
 /*# sourceMappingURL=index.css.map */

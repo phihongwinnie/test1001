@@ -70,16 +70,20 @@ function doFirst() {
         }
     });
 
+    $('#addFamGroup').click(function() {
+        addFamGroup();
+    });
 }
 
-function openHome() {
-    fillCity_home();
-    $('#myProvince_home').show();
-    $('#myCity_home').show();
-    $('#myArea_home').show();
-    $('#address_home').html('');
-    $('#addressTwo').val('').hide();
-    $('#addressTwo').attr('disabled', false);
+function addFamGroup() {
+    alert("Hello!");
+    var famGroup = document.querySelector('.famGroup');
+    console.log(famGroup);
+
+    var newFamily = famGroup.cloneNode(true);
+    console.log(newFamily);
+
+    newFamily.before($('#addFamGroup'));
 }
 
 
@@ -261,6 +265,17 @@ function checkUserId() {
     } else {
         alert("身分证号码输入错误！");
     }
+}
+
+//取消勾選"同戶籍地址"
+function openHome() {
+    fillCity_home();
+    $('#myProvince_home').show();
+    $('#myCity_home').show();
+    $('#myArea_home').show();
+    $('#address_home').html('');
+    $('#addressTwo').val('').hide();
+    $('#addressTwo').attr('disabled', false);
 }
 
 window.addEventListener('load', doFirst);

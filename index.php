@@ -234,7 +234,7 @@
                 </div>
                 <div class="family basicStyle">
                     <h2>家庭成员</h2>
-                    <div class="hiddenPart famGroup group">
+                    <div class="hiddenPart famGroupSample group">
                         <p class="infoTitle">称谓：</p>
                         <input type="text" placeholder="請输入称谓">
                         <p class="infoTitle">姓名：</p>
@@ -260,7 +260,7 @@
                             <button>删除</button>
                         </div>
                     </div>
-                    <div class="famGroup group">
+                    <!-- <div class="famGroup group">
                         <p class="infoTitle">称谓：</p>
                         <input type="text" placeholder="請输入称谓">
                         <p class="infoTitle">姓名：</p>
@@ -272,8 +272,8 @@
                         <div class="deleBtn">
                             <button>删除</button>
                         </div>
-                    </div>
-                    <div class="addFamGroup addGroup">
+                    </div> -->
+                    <div class="addGroup" id="addFamGroup">
                         <button>新增家庭成员</button>
                     </div>
                 </div>
