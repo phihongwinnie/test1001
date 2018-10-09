@@ -15,7 +15,7 @@ function doFirst() {
         $(".dateinfo").append("<option value='" + allinfo[i] + "'>" + allinfo[i] + "</option>");
     }
 
-
+    //縣市區選單
     $('#myProvince_resident').change(function() {
         fillCity_resident();
     });
@@ -75,54 +75,128 @@ function doFirst() {
         addFamGroup();
     });
 
-    deleBtnFam = document.getElementsByClassName('deleBtnFam');
-    for (var i = 0; i < deleBtnFam.length; i++) {
-        deleBtnFam[i].addEventListener('click', deleteFam);
-    }
-
-}
-
-//刪除家庭成員之click事件
-// deleBtnFam = document.getElementsByClassName('deleBtnFam');
-// for (var i = 0; i < deleBtnFam.length; i++) {
-//     deleBtnFam[i].addEventListener('click', deleteFam);
-// }
-
-//刪除工作經歷之click事件
-deleBtnWork = document.getElementsByClassName('deleBtnWork');
-for (var i = 0; i < deleBtnWork.length; i++) {
-    deleBtnWork[i].onclick = deleteWork;
-}
-
-
-
-
-
-//新增家庭成員欄位
-function addFamGroup() {
-    var famGroup = document.querySelector('.famGroupSample');
-    var newFamily = famGroup.cloneNode(true);
-    var family = document.querySelector('.family');
-    family.appendChild(newFamily);
-    removeClass();
-
     //刪除家庭成員之click事件
     deleBtnFam = document.getElementsByClassName('deleBtnFam');
     for (var i = 0; i < deleBtnFam.length; i++) {
         deleBtnFam[i].addEventListener('click', deleteFam);
     }
+
+    //新增工作經歷之click事件
+    $('#addWorkGroup').click(function() {
+        addWorkGroup();
+    });
+
+    //刪除工作經歷之click事件
+    deleBtnWork = document.getElementsByClassName('deleBtnWork');
+    for (var i = 0; i < deleBtnWork.length; i++) {
+        deleBtnWork[i].addEventListener('click', deleteWork);
+    }
+
+    $('#enterCompany').change(function() {
+        methodNum = $('#enterCompany').val();
+        openMethodInput(methodNum);
+    });
+
+    healthType = document.getElementsByName("healthType");
+    for (var i = 0; i < healthType.length; i++) {
+        healthType[i].addEventListener('click', openHealthInput);
+    }
 }
 
-function removeClass() {
+function openHealthInput() {
+    healthValue = document.querySelector('input[name="healthType"]:checked').value;
+    if (healthValue == 'yes') {
+        $('#yesOpenInput').show();
+    } else {
+        $('#yesOpenInput').hide();
+    }
+}
+
+function openMethodInput(methodNum) {
+    methodNum = $('#enterCompany').val();
+    var m2 = document.querySelector('.method2');
+    var m4 = document.querySelector('.method4');
+    var m5 = document.querySelector('.method5');
+
+    switch (methodNum) {
+        case 'method2':
+            m4.style.display = "none";
+            m5.style.display = "none";
+            m2.style.display = "block";
+            break;
+        case 'method4':
+            m2.style.display = "none";
+            m5.style.display = "none";
+            m4.style.display = "block";
+            break;
+        case 'method5':
+            m2.style.display = "none";
+            m4.style.display = "none";
+            m5.style.display = "block";
+            break;
+        default:
+            m2.style.display = "none";
+            m4.style.display = "none";
+            m5.style.display = "none";
+            break;
+    }
+}
+
+//新增家庭成員欄位
+function addFamGroup() {
+    var famCount = document.querySelectorAll('.famGroup');
+    if (famCount.length == 5) {
+        alert("最多填写四位成员！");
+    } else {
+        var famGroup = document.querySelector('.famGroupSample');
+        var newFamily = famGroup.cloneNode(true);
+        var family = document.querySelector('.family');
+        family.appendChild(newFamily);
+        removeFamClass();
+
+        //刪除家庭成員之click事件
+        deleBtnFam = document.getElementsByClassName('deleBtnFam');
+        for (var i = 0; i < deleBtnFam.length; i++) {
+            deleBtnFam[i].addEventListener('click', deleteFam);
+        }
+    }
+}
+
+//新增工作經歷欄位
+function addWorkGroup() {
+    var workCount = document.querySelectorAll('.workGroup');
+    if (workCount.length == 3) {
+        alert("请填写最近期的两项经历！");
+    } else {
+        var workGroup = document.querySelector('.workGroupSample');
+        var newWork = workGroup.cloneNode(true);
+        var workExp = document.querySelector('.workExp');
+        workExp.appendChild(newWork);
+        removeWorkClass();
+
+        deleBtnWork = document.getElementsByClassName('deleBtnWork');
+        for (var i = 0; i < deleBtnWork.length; i++) {
+            deleBtnWork[i].addEventListener('click', deleteWork);
+        }
+    }
+}
+
+function removeFamClass() {
     var famGroupSample = document.querySelectorAll('.famGroupSample');
     famGroupSample[1].classList.remove("hiddenPart");
     famGroupSample[1].classList.remove("famGroupSample");
 }
 
+function removeWorkClass() {
+    var workGroupSample = document.querySelectorAll('.workGroupSample');
+    workGroupSample[1].classList.remove("hiddenPart");
+    workGroupSample[1].classList.remove("workGroupSample");
+}
+
+
 //刪除家庭成員
 function deleteFam() {
     var famParent = this.parentNode.parentNode;
-    // famParent.parentNode.removeChild(famParent);
     var famCount = document.querySelectorAll('.famGroup');
 
     //famCount.length含隱藏欄位的數量，故需要>2
@@ -132,13 +206,22 @@ function deleteFam() {
             famParent.parentNode.removeChild(famParent);
         } else {}
     } else {
-        alert('必填一位家庭成員！')
+        alert('必填一位家庭成员！')
     }
 
 }
 
+//刪除工作經歷
 function deleteWork() {
+    var workParent = this.parentNode.parentNode;
+    var workCount = document.querySelectorAll('.workGroup');
 
+    if (workCount.length > 1) {
+        var warn = confirm("确定要删除吗？");
+        if (warn == true) {
+            workParent.parentNode.removeChild(workParent);
+        } else {}
+    } else {}
 }
 
 
@@ -294,10 +377,14 @@ function checkUserId() {
             var secondPart = document.querySelector(".secondPart");
             var thirdPart = document.querySelector(".thirdPart");
             var fourPart = document.querySelector(".fourPart");
+            var fivePart = document.querySelector(".fivePart");
+
 
             secondPart.style.display = "block";
             thirdPart.style.display = "block";
             fourPart.style.display = "block";
+            fivePart.style.display = "block";
+
 
             document.querySelector(".defaultUserId").innerText = value;
             var birYear = value.substr(6, 4);

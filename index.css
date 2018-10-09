@@ -266,7 +266,7 @@ header h3 span {
 
 .basicStyle {
   font-size: 20px;
-  margin: 5% 0%;
+  margin: 5% 0% 3%;
   padding: 3% 4% 5%;
   border: 2px solid rgba(178, 183, 189, 0.5);
 }
@@ -299,6 +299,11 @@ header h3 span {
   margin-right: 5%;
 }
 
+.health label {
+  display: block;
+  margin-top: 10px;
+}
+
 .addressInfo select {
   display: block;
 }
@@ -328,7 +333,21 @@ header h3 span {
 
 .addGroup {
   text-align: center;
-  margin-top: 15px;
+}
+
+.addGroup button {
+  font-family: 微軟正黑體, 新細明體;
+  font-size: 18px;
+}
+
+.method2,
+.method4,
+.method5 {
+  display: none;
+}
+
+#yesOpenInput {
+  display: none;
 }
 
 .workExp button {
@@ -336,8 +355,14 @@ header h3 span {
   font-size: 18px;
 }
 
+.workExp .workDelBtn {
+  margin-top: 10px;
+  text-align: right;
+}
+
 .nextCheck {
   text-align: center;
+  padding-top: 20px;
 }
 
 .nextCheck button {
@@ -370,7 +395,8 @@ footer figure img {
 
 .secondPart,
 .thirdPart,
-.fourPart {
+.fourPart,
+.fivePart {
   display: none;
 }
 

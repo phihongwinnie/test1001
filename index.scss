@@ -238,7 +238,7 @@ header {
 
 .basicStyle {
     font-size: 20px;
-    margin: 5% 0%;
+    margin: 5% 0% 3%;
     padding: 3% 4% 5%;
     // padding-bottom: 2.5%;
     // padding-left: 5%;
@@ -266,6 +266,13 @@ header {
     }
     label {
         margin-right: 5%;
+    }
+}
+
+.health {
+    label {
+        display: block;
+        margin-top: 10px;
     }
 }
 
@@ -305,7 +312,21 @@ header {
 
 .addGroup {
     text-align: center;
-    margin-top: 15px;
+    // margin-top: 15px;
+    button {
+        font-family: 微軟正黑體, 新細明體;
+        font-size: 18px;
+    }
+}
+
+.method2,
+.method4,
+.method5 {
+    display: none;
+}
+
+#yesOpenInput {
+    display: none;
 }
 
 .workExp {
@@ -313,14 +334,15 @@ header {
         font-family: 微軟正黑體, 新細明體;
         font-size: 18px;
     }
+    .workDelBtn {
+        margin-top: 10px;
+        text-align: right;
+    }
 }
 
-// .deleBtn {
-//     margin-top: 10px;
-//     text-align: right;
-// }
 .nextCheck {
     text-align: center;
+    padding-top: 20px;
     button {
         font-family: 微軟正黑體, 新細明體;
         font-size: 18px;
@@ -357,7 +379,8 @@ footer {
 
 .secondPart,
 .thirdPart,
-.fourPart {
+.fourPart,
+.fivePart {
     display: none;
 }
 

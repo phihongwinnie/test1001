@@ -129,10 +129,11 @@
                     <h2>健康状态</h2>
                     <p class="infoTitle">截至入职当天为止，尚未完全康复的疾病：</p>
                     <label for="no">
-                        <input type="radio" name="healthType" id="no">无
+                        <input type="radio" name="healthType" id="no" value="no">无
                     </label>
                     <label for="yes">
-                        <input type="radio" name="healthType" id="yes">有
+                        <input type="radio" name="healthType" id="yes" value="yes">有
+                        <input id="yesOpenInput" type="text" placeholder="請简述">
                     </label>
                 </div>
             </section>
@@ -267,20 +268,30 @@
                 <div class="enterMethod basicStyle">
                     <h2>入职方式</h2>
                     <p class="infoTitle">入职管道：</p>
-                    <select name="" id="">
+                    <select name="" id="enterCompany">
                         <option value="">请选择</option>
-                        <option value="">人才市场</option>
-                        <option value="">劳务中介</option>
-                        <option value="">招聘广告</option>
-                        <option value="">求职网站</option>
-                        <option value="">内部员工介绍</option>
+                        <option value="method1">人才市场</option>
+                        <option value="method2">劳务中介</option>
+                        <option value="method3">招聘广告</option>
+                        <option value="method4">求职网站</option>
+                        <option value="method5">内部员工介绍</option>
                     </select>
-                    <p class="infoTitle">介紹人姓名：</p>
-                    <input type="text" placeholder="請输入姓名">
-                    <p class="infoTitle">介紹人部门：</p>
-                    <input type="text" placeholder="請输入介紹人部门">
-                    <p class="infoTitle">与本人关系：</p>
-                    <input type="text" placeholder="請输入关系">
+                    <div class="method2">
+                        <p class="infoTitle">中介名称：</p>
+                        <input type="text" placeholder="請输入名称">
+                    </div>
+                    <div class="method4">
+                        <p class="infoTitle">网站名称：</p>
+                        <input type="text" placeholder="請输入名称">
+                    </div>
+                    <div class="method5">
+                        <p class="infoTitle">介紹人姓名：</p>
+                        <input type="text" placeholder="請输入姓名">
+                        <p class="infoTitle">介紹人部门：</p>
+                        <input type="text" placeholder="請输入介紹人部门">
+                        <p class="infoTitle">与本人关系：</p>
+                        <input type="text" placeholder="請输入关系">
+                    </div>
                 </div>
                 <div class="workExp basicStyle">
                     <h2>工作经历</h2>
@@ -306,7 +317,7 @@
                         <input type="text" placeholder="請输入职位">
                         <p class="infoTitle">离职原因：</p>
                         <input type="text" placeholder="請输入离职原因">
-                        <div>
+                        <div class="workDelBtn">
                             <button class="deleBtnWork">删除</button>
                         </div>
                     </div>
@@ -332,45 +343,19 @@
                         <input type="text" placeholder="請输入职位">
                         <p class="infoTitle">离职原因：</p>
                         <input type="text" placeholder="請输入离职原因">
-                        <div>
+                        <div class="workDelBtn">
                             <button class="deleBtnWork">删除</button>
                         </div>
                     </div>
-                    <div class="group">
-                        <p class="infoTitle">公司全名：</p>
-                        <input type="text" placeholder="請输入公司全名">
-                        <p class="infoTitle">任职期间：</p>
-                        <div>
-                            自
-                            <select id="dateinfo3" name="dateinfo1" class="dateinfo">
-                                <option>请选择年月份</option>
-                            </select> 起
-                        </div>
-                        <div>
-                            至
-                            <select id="dateinfo4" name="dateinfo2" class="dateinfo">
-                                <option>请选择年月份</option>
-                            </select> 止
-                        </div>
-                        <p class="infoTitle">任职部门：</p>
-                        <input type="text" placeholder="請输入任职部门">
-                        <p class="infoTitle">职位：</p>
-                        <input type="text" placeholder="請输入职位">
-                        <p class="infoTitle">离职原因：</p>
-                        <input type="text" placeholder="請输入离职原因">
-                        <div class="deleBtnWork">
-                            <button>删除</button>
-                        </div>
-                    </div>
-                    <div class="addGroup">
-                        <button>新增工作经历</button>
-                    </div>
                 </div>
-                <div class="nextCheck">
-                    <button>下一步</button>
+                <div class="addGroup">
+                    <button id="addWorkGroup">新增工作经历</button>
                 </div>
             </section>
-            <footer class="fourPart">
+            <div class="nextCheck fourPart">
+                <button>下一步</button>
+            </div>
+            <footer class="fivePart">
                 <figure>
                     <img src="./image/phihong_logo.png" alt="phihong_logo">
                 </figure>
