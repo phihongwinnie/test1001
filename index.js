@@ -70,20 +70,75 @@ function doFirst() {
         }
     });
 
+    //新增家庭成員之click事件
     $('#addFamGroup').click(function() {
         addFamGroup();
     });
+
+    deleBtnFam = document.getElementsByClassName('deleBtnFam');
+    for (var i = 0; i < deleBtnFam.length; i++) {
+        deleBtnFam[i].addEventListener('click', deleteFam);
+    }
+
 }
 
+//刪除家庭成員之click事件
+// deleBtnFam = document.getElementsByClassName('deleBtnFam');
+// for (var i = 0; i < deleBtnFam.length; i++) {
+//     deleBtnFam[i].addEventListener('click', deleteFam);
+// }
+
+//刪除工作經歷之click事件
+deleBtnWork = document.getElementsByClassName('deleBtnWork');
+for (var i = 0; i < deleBtnWork.length; i++) {
+    deleBtnWork[i].onclick = deleteWork;
+}
+
+
+
+
+
+//新增家庭成員欄位
 function addFamGroup() {
-    alert("Hello!");
-    var famGroup = document.querySelector('.famGroup');
-    console.log(famGroup);
-
+    var famGroup = document.querySelector('.famGroupSample');
     var newFamily = famGroup.cloneNode(true);
-    console.log(newFamily);
+    var family = document.querySelector('.family');
+    family.appendChild(newFamily);
+    removeClass();
 
-    newFamily.before($('#addFamGroup'));
+    //刪除家庭成員之click事件
+    deleBtnFam = document.getElementsByClassName('deleBtnFam');
+    for (var i = 0; i < deleBtnFam.length; i++) {
+        deleBtnFam[i].addEventListener('click', deleteFam);
+    }
+}
+
+function removeClass() {
+    var famGroupSample = document.querySelectorAll('.famGroupSample');
+    famGroupSample[1].classList.remove("hiddenPart");
+    famGroupSample[1].classList.remove("famGroupSample");
+}
+
+//刪除家庭成員
+function deleteFam() {
+    var famParent = this.parentNode.parentNode;
+    // famParent.parentNode.removeChild(famParent);
+    var famCount = document.querySelectorAll('.famGroup');
+
+    //famCount.length含隱藏欄位的數量，故需要>2
+    if (famCount.length > 2) {
+        var warn = confirm("确定要删除吗？");
+        if (warn == true) {
+            famParent.parentNode.removeChild(famParent);
+        } else {}
+    } else {
+        alert('必填一位家庭成員！')
+    }
+
+}
+
+function deleteWork() {
+
 }
 
 
